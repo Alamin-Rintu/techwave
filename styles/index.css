@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+.inter-font {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+
 body{
     background-color: #1A0B2E;
 }
@@ -49,7 +56,7 @@ header {
     cursor: pointer;
 }
 
-/* HERO SECTION */
+/* hero section */
 .hero-container {
     height: calc(100vh - 80px); 
     background-image: url('../assets/hero-bg.png');
@@ -58,10 +65,10 @@ header {
     background-repeat: no-repeat;
 
     display: flex;
-    flex-direction: column; /* column layout */
-    justify-content: center; /* vertical centering */
-    align-items: center;     /* horizontal centering */
-    gap: 40px;               /* space between circle and text */
+    flex-direction: column;
+    justify-content: center; 
+    align-items: center;    
+    gap: 40px;               
     text-align: center;
     padding: 0 20px;
 }
@@ -88,6 +95,39 @@ header {
     transform: translate(-50%, -50%);
     width: 80px;
 }
+.badge{
+        position: absolute;
+        top: 10px;
+    right: 10px;             
+    background-color: #00FF88;
+    color: black; 
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    border-radius: 50px;
+    z-index: 10; 
+}
+@keyframes orbit360 {
+  0% {
+    transform: rotate(0deg) translateX(120px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(120px) rotate(-360deg);
+  }
+}
+
+.mic {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 80px;
+  transform-origin: center center; /* rotate around the circle center */
+  animation: orbit360 6s linear infinite;
+}
+
+/* I help here from chat gpt */
+
+
 
 /* Hero text */
 .hero-text h3 {
@@ -358,5 +398,24 @@ iframe{
     .footer-icon{
         grid-template-columns: repeat(2,1fr);
     }
+     .hero-container {
+        gap: 20px;
+        padding: 0 10px;
+    }
+
+    .img-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .mic {
+        width: 50px; 
+    }
+
+    .badge {
+        font-size: 12px;
+        padding: 4px 8px;
+    }
+
     
 }
