@@ -1,13 +1,16 @@
-main{
+body{
     background-color: #1A0B2E;
 }
 header {
     background-color: #1A0B2E;
 }
 
-.logo {
-    font-size: 1.5rem;
+.brand {
+    font-size: 2rem;
     color: white;
+}
+#wave{
+    color: rgb(240, 5, 44);
 }
 
 .navbar {
@@ -98,8 +101,12 @@ header {
     color: white;
     margin-bottom: 20px;
 }
+.banner-btn{
+    display: flex;
+    justify-content: center;
+}
 
-.hero-text button {
+.hero-text .btn-1 {
     padding: 12px 20px;
     margin-right: 10px;
     border: none;
@@ -107,6 +114,14 @@ header {
     background: linear-gradient(to right, #F7E93F, #FB09B4, #9100F8);
     color: white;
     cursor: pointer;
+}
+.hero-text .btn-2{
+     padding: 12px 20px;
+    margin-right: 10px;
+    border-radius: 20px;
+    color: #00FF88;
+    border: 1px solid white;
+    background-color: transparent;
 }
 
 /* podcast style */
@@ -252,6 +267,7 @@ iframe{
     background-color: rgba(53, 17, 101, 0.4);
     gap: 30px;
     padding: 40px;
+    border-radius: 16px;
 }
 
 .host-container h3{
@@ -270,7 +286,53 @@ iframe{
     margin-right: 10px;
 }
 
+/* footer style */
+.footer{
+    background-color: #1A0B2E;
+}
 
+.footer-container { 
+    background-image: url('../assets/footer-bg.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.footer-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: white;
+}
+.footer-icon {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+}
+
+.footer-icon div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-icon img {
+    width: 50px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.footer-container p {
+    font-size: 0.9rem;        
+    margin: 0;
+    letter-spacing: 0.5px;
+    color: #FAFAFA;
+}
 
 
 
@@ -292,6 +354,9 @@ iframe{
     .host-container{
         flex-direction: column;
         align-items: center;
+    }
+    .footer-icon{
+        grid-template-columns: repeat(2,1fr);
     }
     
 }
